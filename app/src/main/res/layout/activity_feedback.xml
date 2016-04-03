@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        style="@style/MyToolbarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:textSize="16sp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:text="We would love to hear from you...."
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/feedbackEditText"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="top"
+            android:imeOptions="actionNone"
+            android:hint="@string/feedbackHint" />
+
+    </LinearLayout>
+
+    <com.dd.CircularProgressButton
+        android:id="@+id/feedbackButton"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        app:cpb_textComplete="@string/feedbackSent"
+        app:cpb_textError="@string/errorSendingFeedback"
+        app:cpb_cornerRadius="2dp"
+        app:cpb_textIdle="@string/sendFeedback"
+        app:cpb_selectorIdle="@drawable/button_blue3_idle_state_selector" />
+</LinearLayout>

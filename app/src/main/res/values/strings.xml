@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TUMitfahrer</string>
+    <!-- Navigation Drawer Strings -->
+    <string-array name="navigation_drawer_array">
+        <item>Timeline</item>
+        <item>All rides</item>
+        <item>Create</item>
+        <item>Search</item>
+        <item>My rides</item>
+        <item>Settings</item>
+        <item>Log out</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="email">Your TUM-Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="create_account">Create account!</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="faculty">Faculty number</string>
+    <string name="title_activity_login_register">LoginRegisterActivity</string>
+    <string name="departure">Departure</string>
+    <string name="destination">Destination</string>
+    <string name="meeting_point">Meeting point</string>
+    <string name="free_seats">Free seats</string>
+    <string name="pick_time">Pick Time</string>
+    <string name="pick_date">Pick Date</string>
+    <string name="offer_ride">Offer Ride</string>
+    <string name="ride_type">Choose the Ride type</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="search">Search</string>
+
+    <!-- Ride type arrays for search and create -->
+    <string-array name="ride_array_search">
+        <item>All</item>
+        <item>Campus</item>
+        <item>Activity</item>
+    </string-array>
+
+    <string-array name="ride_array_create">
+        <item>Campus</item>
+        <item>Activity</item>
+    </string-array>
+
+    <string-array name="user_array">
+        <item>Driver</item>
+    </string-array>
+
+    <string name="ridetype_Campus">Campus</string>
+    <string name="ridetype_Activity">Activity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_about">About</string>
+    <string name="title_activity_search_results">Search Result</string>
+    <string name="title_activity_licenses">Licenses</string>
+    <string name="title_activity_terms_of_use">Privacy Statement</string>
+    <string name="title_activity_general_terms_and_conditions">General Terms and Condition</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+
+    <!--Toast Messages -->
+    <string name="login_allRequired">Please fill all the required fields to continue</string>
+
+    <string name="profile_imageError">Cannot load image</string>
+    <string name="profile_updateSuccess">User Updated</string>
+    <string name="profile_updateFailed">Failed to update User</string>
+
+    <string name="createRide_invalidDate">Cannot create ride in the past. Select another date.</string>
+    <string name="createRide_invalidTime">Cannot create ride in the past. Select another time.</string>
+
+    <string name="createRide_repeatOn">Repeat on : </string>
+    <string name="createRide_failure">Offering Ride Failed! Please check credentials and try again.</string>
+    <string name="createRide_success">Ride Created</string>
+
+    <string name="rideDetails_deleteSuccess">Delete Success</string>
+    <string name="rideDetails_deleteFailed">Delete Failed</string>
+    <string name="rideRequest_sentSuccess">Request sent.</string>
+    <string name="rideRequest_sentFail">Request failed.</string>
+
+    <string name="sendResponse_successful">Response sent.</string>
+    <string name="sendResponse_notSuccessful">Response failed.</string>
+
+    <string name="timeline_activityFail">Cannot retrieve the activities</string>
+
+    <string name="title_feedback">Feedback</string>
+
+    <string name="about_heading1">Need a ride to the university?</string>
+    <string name="about_description1">Search for a ride to your campus and join fellow students going to the uni by car. Travel in a nice student atmosphere.</string>
+
+    <string name="about_heading2">Looking for weekend ideas?</string>
+    <string name="about_description2">Join activity rides and enjoy cool trip to IKEA, nearby lake or a hiking trip in the mountains.</string>
+
+    <string name="about_heading3">Have free seats in your car?</string>
+    <string name="about_description3">Create a ride and share travel expenses between all people.</string>
+
+    <!-- Push Notification / Pebble Contants -->
+    <string name="deviceNotSupported">This device is not supported.</string>
+    <string name="googlePlayServiceNotFound">No valid Google Play Services APK found.</string>
+
+    <!-- Notification Engine Strings -->
+    <string name="messageTitle">TUMitfahrer</string>
+
+    <string name="feedbackPrompt">We would love to hear what you have to say…</string>
+    <string name="feedbackHint">Write your feedback here</string>
+    <string name="sendFeedback">Send us feedback</string>
+    <string name="feedbackSent">Feedback sent. Thanks!</string>
+    <string name="errorSendingFeedback">Error sending Feedback</string>
+    <string name="repeat">Repeat?</string>
+    <string name="incorrectDateTitle">Incorrect date</string>
+    <string name="incorrectDateMsg">You cannot search for rides in the past. Select another date.</string>
+    <string name="okButton">Ok</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="requestJoinRide">Join Ride</string>
+    <string name="requestJoinRide_successfull">Join Requested</string>
+    <string name="requestJoinRide_notSuccessful">Join Request Failed</string>
+    <string name="cancelJoinRequest">Cancel Request</string>
+    <string name="cancelJoinRequest_successful">Join Request Cancelled</string>
+    <string name="cancelJoinRequest_notSuccessful">Cancel Request Failed</string>
+    <string name="cancelJoinRequest_question">Cancel join request?</string>
+    <string name="deleteRide">Delete Ride</string>
+    <string name="deleteRide_successful">Ride Deleted</string>
+    <string name="deleteRide_notSuccessful">Delete Ride Failed</string>
+    <string name="offerRide_successful">Offering Ride</string>
+    <string name="offerRide_notSuccessful">Offer Ride Failed</string>
+    <string name="leaveRide">Leave Ride</string>
+    <string name="leaveRide_successful">Ride Left</string>
+    <string name="leaveRide_NotSuccessful">Leaving Ride Failed</string>
+    <string name="removePassenger_successful">Passenger Removed</string>
+    <string name="removePassenger_notSuccessful">Remove Passenger Failed</string>
+    <string name="noSeatsLeft">No seats left</string>
+    <string name="severalSeatsLeft"> seats free</string>
+    <string name="oneSeatLeft">1 seat free</string>
+
+    <string name="error_required">Required</string>
+    <string name="error_notInEurope_destination">Destination is not in Europe.</string>
+    <string name="error_notInEurope_departure">Departure is not in Europe.</string>
+    <string name="error_notValid_destination">Not a valid destination.</string>
+    <string name="error_notValid_departure">Not a valid departure.</string>
+    <string name="invalid">Invalid</string>
+
+    <string name="rides_error">Fetching Rides Failed</string>
+    <string name="dateFormat">yyyy-MM-dd HH:mm</string>
+
+    <string name="NoRides">No rides!</string>
+    <string name="NoRides_Detail">No rides found, please search again.</string>
+    <string name="NoResults">No results found!</string>
+    <string name="ridesAsDriver">Rides as Driver</string>
+    <string name="joinedRides">Joined Rides</string>
+    <string name="joinReq_timeline">Join request received for a ride to</string>
+    <string name="created_timeline">New ride offer to</string>
+
+    <string name="logOutTitle">Logout?</string>
+    <string name="logOutMessage">Do you really want to logout? </string>
+    <string name="login_emailRequired">Please provide your email address.</string>
+    <string name="login_passwordRequired">Please enter your password.</string>
+    <string name="sameDepAndDestMsg">Departure and destination cannot be the same.</string>
+    <string name="user_type">Choose the type of the ride</string>
+    <string name="searchRide_invalidDate">Cannot search ride in the past. Select another date.</string>
+    <string name="searchRide_invalidTime">Cannot search ride in the past. Select another time.</string>
+    <string name="googleServerUnavailable">Your internet is switched off or the Google server is currently unavailable. Please try again later.</string>
+</resources>

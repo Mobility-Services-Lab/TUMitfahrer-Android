@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/tumitfahr_list_selector_holo_light"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:layout_height="170dp">
+
+    <ImageView
+        android:src="@drawable/list_image_placeholder"
+        android:layout_width="fill_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="169dp"
+        android:id="@+id/ride_location_image" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_margin="16dp"
+        android:layout_height="118dp">
+
+        <RelativeLayout
+            android:id="@+id/ride_item_row_one"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rides_to_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:text="1 seat free"
+                android:textColor="@color/white"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:layout_gravity="right"
+                android:background="@android:color/holo_orange_dark"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/ride_seats_text" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/rides_from_text"
+                android:text="Marienplatz"
+                android:textColor="@color/white"
+                android:drawablePadding="12dp"
+                android:gravity="center|left"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/imageView" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ride_item_row_three"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/campus_activity"
+                android:text="Campus"
+                android:textColor="@color/white"
+                android:drawablePadding="12dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/ic_school_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ride_item_row_two"
+            android:layout_above="@id/ride_item_row_three"
+            android:layout_width="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:id="@+id/rides_to_text"
+            android:drawablePadding="12dp"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_flag"
+            android:text="Garching-Forschungzentrum"
+            android:textColor="@color/white"
+            android:gravity="center|left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ride_item_row_two"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/rides_time_text"
+                android:text="11.00"
+                android:drawablePadding="12dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginRight="16dp"
+                android:drawableLeft="@drawable/ic_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/rides_date_text"
+                android:layout_toRightOf="@+id/rides_time_text"
+                android:text="13.12.2014"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="12dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/panoramio_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_panoramio" />
+
+</FrameLayout>

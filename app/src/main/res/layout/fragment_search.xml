@@ -1,0 +1,306 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <!-- <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/segmentedRideType"
+            android:layout_width="fill_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioButtonCampus"
+                android:layout_width="0dp"
+                android:checked="true"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:text="Campus Ride"
+                style="@style/RadioButton" />
+
+            <RadioButton
+                android:id="@+id/radioButtonActivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Activity Ride"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                style="@style/RadioButton" />
+        </info.hoang8f.android.segmented.SegmentedGroup>-->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:paddingLeft="12dp"
+                android:paddingRight="3dp"
+                android:gravity="center"
+                android:text="Type of ride"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/searchRideTypeSpinner"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="@string/ride_type" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/fromSearchEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:hint="@string/from" />
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_marginTop="6dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:paddingLeft="12dp"
+                    android:gravity="left"
+                    android:text="Radius"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/fromRadiusTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:paddingRight="12dp"
+                    android:gravity="right"
+                    android:text="1.0 km"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/fromRadiusSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp"
+                    android:max="20"
+                    android:progress="4"
+                    android:thumb="@drawable/tumitfahr_scrubber_control_selector_holo_light"
+                    android:progressDrawable="@drawable/tumitfahr_scrubber_progress_horizontal_holo_light"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="5.0 km"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/toSearchEditText"
+                    android:inputType="textNoSuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/to" />
+
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:paddingLeft="12dp"
+                    android:gravity="left"
+                    android:text="Radius"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/toRadiusTextView"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:paddingRight="12dp"
+                    android:gravity="right"
+                    android:text="1.0 km"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:layout_height="wrap_content" />
+
+                <SeekBar
+                    android:id="@+id/toRadiusSeekBar"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="8dp"
+                    android:max="20"
+                    android:progress="4"
+                    android:thumb="@drawable/tumitfahr_scrubber_control_selector_holo_light"
+                    android:progressDrawable="@drawable/tumitfahr_scrubber_progress_horizontal_holo_light"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="5.0 km"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/pickTimeButton"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:drawableLeft="@drawable/ic_access_time_black_18dp"
+                android:text="@string/pick_time" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_faded"
+                android:layout_marginBottom="10dp"
+                android:layout_height="fill_parent" />
+
+
+            <Button
+                android:id="@+id/pickDateButton"
+                style="?android:buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_today_black_18dp"
+                android:text="@string/pick_date" />
+        </LinearLayout>
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/searchButton"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            app:cpb_cornerRadius="2dp"
+            app:cpb_textComplete="Finished Searching"
+            app:cpb_textError="Error"
+            app:cpb_textIdle="Search"
+            app:cpb_selectorIdle="@drawable/button_blue3_idle_state_selector" />
+    </LinearLayout>
+</ScrollView>

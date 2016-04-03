@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:text="Feedback"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="@drawable/tumitfahr_list_selector_holo_light"
+            android:id="@+id/settings_feedback"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_send_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Send us feedback"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="fill_parent"
+            android:text="General"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="@drawable/tumitfahr_list_selector_holo_light"
+            android:id="@+id/settings_terms_of_use"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_lock_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/title_activity_terms_of_use"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="@drawable/tumitfahr_list_selector_holo_light"
+            android:id="@+id/settings_conditions"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_lock_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="@string/title_activity_general_terms_and_conditions"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="@drawable/tumitfahr_list_selector_holo_light"
+            android:id="@+id/settings_licenses"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_license_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="Licenses"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:text="About TUMitfahrer"
+            android:textColor="@color/white"
+            android:background="@color/blue4"
+            android:gravity="center_vertical"
+            android:drawablePadding="6dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="14dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:clickable="true"
+            android:background="@drawable/tumitfahr_list_selector_holo_light"
+            android:id="@+id/settings_about"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_info_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="About TUMitfahrer"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

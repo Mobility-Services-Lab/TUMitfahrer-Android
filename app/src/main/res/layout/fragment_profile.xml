@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/profile_big_blurred"
+                android:background="@drawable/list_image_placeholder"
+                android:src="@color/transparent_black"
+                android:layout_height="fill_parent" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="bottom"
+                android:layout_height="wrap_content">
+
+                <com.pkmmte.view.CircularImageView
+                    android:layout_width="75dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="12dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/ic_account_dark"
+                    android:scaleType="fitCenter"
+                    app:border_color="@color/white"
+                    app:border_width="3dp"
+                    app:border="true"
+                    app:shadow="true"
+                    android:id="@+id/profile_image"
+                    android:adjustViewBounds="true"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:text="Olivia Wilde"
+                    android:id="@+id/profile_name_text"
+                    android:gravity="center"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textAppearance="?android:attr/textAppearanceLargeInverse"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@color/blue4"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_height="48dp">
+
+            <!--<TextView
+                android:layout_width="0dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_driver"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical|left"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />-->
+
+            <!--<TextView
+                android:layout_width="0dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_passenger"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />-->
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:text="-"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:drawableLeft="@drawable/ic_action_grade"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_email_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/profile_email"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:text="hello@helloworld.com"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_faded"
+            android:layout_height="2px" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_faded"
+            android:layout_height="2px" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:id="@+id/layoutPhone"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/phoneUser"
+                android:src="@drawable/ic_phone_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/profile_phone"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:text="Not defined"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_faded"
+            android:layout_height="2px" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:id="@+id/layoutCar"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/carUser"
+                android:src="@drawable/ic_car_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/profile_car"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:text="Not defined"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_faded"
+            android:layout_height="2px" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_school_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/profile_department"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:text="Informatics"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:padding="16dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:src="@drawable/ic_lock_dark"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/profile_password"
+                android:layout_width="0dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:text="Change Password"
+                android:textColor="@color/gray"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="2px"
+                android:background="@color/gray_faded"
+                android:layout_height="fill_parent" />
+
+            <ImageButton
+                android:id="@+id/change_password_button"
+                android:layout_width="wrap_content"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_action_create"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

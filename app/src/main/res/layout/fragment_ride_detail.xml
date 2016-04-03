@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<de.tum.mitfahr.widget.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notifyingScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <ImageView
+                    android:src="@drawable/list_image_placeholder"
+                    android:layout_width="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/ride_location_image" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_margin="16dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/ride_item_row_three"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="27dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:id="@+id/campus_activity"
+                            android:text="Campus"
+                            android:drawablePadding="12dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:drawableLeft="@drawable/ic_school_white_24dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ride_item_row_two"
+                        android:layout_above="@id/ride_item_row_three"
+                        android:layout_width="fill_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/details_from_text"
+                        android:text="Marienplatz"
+                        android:textColor="@color/white"
+                        android:drawablePadding="12dp"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:drawableLeft="@drawable/ic_place"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/details_to_text"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:elegantTextHeight="false" />
+
+                    <TextView
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:id="@+id/details_to_text"
+                        android:drawablePadding="12dp"
+                        android:textSize="18sp"
+                        android:drawableLeft="@drawable/ic_flag"
+                        android:text="Garching-Forschungzentrum"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/ride_item_row_two"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/details_to_text"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <TextView
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:id="@+id/details_time_text"
+                            android:text="11.00"
+                            android:drawablePadding="12dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginRight="16dp"
+                            android:drawableLeft="@drawable/ic_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:id="@+id/details_date_text"
+                            android:layout_toRightOf="@+id/details_time_text"
+                            android:text="13.12.2014"
+                            android:drawableLeft="@drawable/ic_date"
+                            android:drawablePadding="12dp"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/panoramio_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_panoramio" />
+
+                <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
+                    android:id="@+id/details_progress_bar"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    app:spb_progressiveStart_activated="false"
+                    style="@style/GNowProgressBar"
+                    android:indeterminate="true" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Details"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:id="@+id/details_car_container"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_car_dark"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/details_car"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/gray_faded"
+                android:layout_height="2px" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:id="@+id/details_info_container"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_meeting_dark"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/details_info"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/gray_faded"
+                android:layout_height="2px" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="16dp"
+                android:id="@+id/details_seats_container"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:src="@drawable/ic_seats"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:id="@+id/details_seats"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/gray_faded"
+                android:layout_height="2px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ride_owner_layout_container"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Ride Owner"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.pkmmte.view.CircularImageView
+                    android:layout_width="56dp"
+                    android:layout_gravity="center"
+                    android:layout_height="56dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_account_dark"
+                    app:border_color="@color/white"
+                    app:border_width="3dp"
+                    app:shadow="true"
+                    app:border="true"
+                    android:background="@color/transparent"
+                    android:id="@+id/details_driver_image_view" />
+
+                <TextView
+                    android:id="@+id/details_ride_owner_name"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textColor="@color/gray"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passengers_layout_container"
+            android:layout_width="fill_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Passengers"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/passengers_item_container"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/requests_layout_container"
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:text="Requests"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/requests_item_container"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.dd.CircularProgressButton
+            android:id="@+id/details_action_button"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_margin="16dp"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="14sp"
+            app:cpb_textComplete="Success"
+            app:cpb_textError="Failed"
+            app:cpb_cornerRadius="2dp"
+            app:cpb_textIdle="Idle"
+            app:cpb_selectorIdle="@drawable/button_blue3_idle_state_selector" />
+    </LinearLayout>
+
+</de.tum.mitfahr.widget.NotifyingScrollView>

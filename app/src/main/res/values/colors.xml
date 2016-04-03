@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue1">#FF0F3750</color>
+    <color name="blue2">#FF005C96</color>
+    <color name="blue3">#FF0076B8</color>
+    <color name="blue4">#FF53A7d5</color>
+
+    <color name="blue1_dark">#FF021F31</color>
+    <color name="blue2_dark">#FF004470</color>
+    <color name="blue3_dark">#FF005785</color>
+    <color name="blue4_dark">#FF2A8ABE</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#FF202020</color>
+    <color name="gray_dark">#FF010101</color>
+
+
+    <color name="gray_faded">#22202020</color>
+    <color name="white_faded">#AAFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="window_background">#FFE5E5E5</color>
+    <color name="transparent_black">#7F000000</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="tumitfahr_color">#0076b8</color>
+    <color name="float_label_inactive">#AA202020</color>
+    <color name="holo_orange_dark">@android:color/holo_orange_dark</color>
+
+    <integer-array name="progress_colors">
+        <item>@android:color/holo_blue_bright</item>
+        <item>@android:color/holo_green_light</item>
+        <item>@android:color/holo_orange_light</item>
+        <item>@android:color/holo_red_light</item>
+    </integer-array>
+</resources>

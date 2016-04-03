@@ -1,0 +1,11 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clipToPadding="false"
+    android:layout_height="match_parent"
+    android:choiceMode="singleChoice"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0dp"
+    android:drawSelectorOnTop="true"
+    android:background="@color/gray"
+    tools:context="de.tum.mitfahr.ui.NavigationDrawerFragment" />

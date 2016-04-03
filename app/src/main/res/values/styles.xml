@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/blue2</item>
+        <item name="colorPrimaryDark">@color/blue1</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:activatedBackgroundIndicator">
+            @drawable/tumitfahr_activated_background_holo_light
+        </item>
+        <item name="colorControlActivated">@color/blue3</item>
+        <item name="colorControlHighlight">@color/blue3</item>
+    </style>
+
+    <!-- Toolbar style -->
+    <style name="MyToolbarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/blue1</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyListView" parent="android:Widget.ListView">
+        <item name="android:listSelector">@drawable/tumitfahr_list_selector_holo_light</item>
+    </style>
+
+    <style name="MyListView.White" parent="android:Widget.ListView.White">
+        <item name="android:listSelector">@drawable/tumitfahr_list_selector_holo_light</item>
+    </style>
+
+    <style name="MySpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">300dp</item>
+    </style>
+
+    <style name="Item.Sticky">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:layout_height">@dimen/sticky_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?android:textAppearanceLarge</item>
+    </style>
+
+    <style name="BorderedTextBox">
+        <item name="android:background">@drawable/edittext_bordered_white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/white_faded</item>
+    </style>
+
+    <style name="BorderedSpinner">
+        <item name="android:background">@drawable/spinner_bordered_white</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+
+    <style name="FlatButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/button_flat_blue1</item>
+    </style>
+
+    <style name="TextAppearance.FloatLabel" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@drawable/float_label_color</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GNowProgressBar" parent="SmoothProgressBar">
+        <item name="spb_stroke_separator_length">0dp</item>
+        <item name="spb_sections_count">2</item>
+        <item name="spb_speed">1.7</item>
+        <item name="spb_progressiveStart_speed">2</item>
+        <item name="spb_progressiveStop_speed">3.4</item>
+        <item name="spb_interpolator">spb_interpolator_acceleratedecelerate</item>
+        <item name="spb_mirror_mode">true</item>
+        <item name="spb_reversed">true</item>
+        <item name="spb_colors">@array/progress_colors</item>
+        <item name="spb_progressiveStart_activated">true</item>
+        <item name="spb_generate_background_with_colors">false</item>
+    </style>
+
+</resources>

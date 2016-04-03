@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/empty_view_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerInside"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_empty2" />
+
+    <TextView
+        android:id="@+id/empty_view_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/empty_view_image"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:text="No rides available" />
+
+</RelativeLayout>

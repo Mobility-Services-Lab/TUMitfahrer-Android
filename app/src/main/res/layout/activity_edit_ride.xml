@@ -1,0 +1,202 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="?android:attr/actionBarSize"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content">
+
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmentedRequestType"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonPassenger"
+                    android:layout_width="0dp"
+                    android:checked="true"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    android:text="I'm a Passenger"
+                    style="@style/RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonDriver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="I'm a Driver"
+                    android:layout_weight="1"
+                    android:textAllCaps="true"
+                    android:textSize="12sp"
+                    style="@style/RadioButton" />
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="16sp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="3dp"
+                    android:gravity="center"
+                    android:text="Looking for"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/rideTypeSpinner"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/ride_type" />
+            </LinearLayout>
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <AutoCompleteTextView
+                    android:id="@+id/departureText"
+                    android:inputType="textNoSuggestions"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:nextFocusDown="@+id/destinationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/departure" />
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <AutoCompleteTextView
+                    android:id="@id/destinationText"
+                    android:inputType="textNoSuggestions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:nextFocusDown="@+id/meetingText"
+                    android:hint="@string/destination" />
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <EditText
+                    android:id="@id/meetingText"
+                    android:inputType="textNoSuggestions"
+                    android:layout_width="match_parent"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:nextFocusDown="@+id/seatsText"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/meeting_point" />
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <de.tum.mitfahr.widget.FloatLabelLayout
+                android:id="@+id/seatsTextContainer"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <EditText
+                    android:id="@id/seatsText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="@string/free_seats" />
+            </de.tum.mitfahr.widget.FloatLabelLayout>
+
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/pickTimeButton"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_access_time_black_18dp"
+                    android:text="@string/pick_time" />
+
+                <View
+                    android:layout_width="2px"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_faded"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="fill_parent" />
+
+
+                <Button
+                    android:id="@+id/pickDateButton"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_today_black_18dp"
+                    android:text="@string/pick_date" />
+            </LinearLayout>
+
+
+            <com.dd.CircularProgressButton
+                android:id="@+id/editRideButton"
+                android:layout_width="fill_parent"
+                android:layout_height="48dp"
+                android:layout_margin="16dp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textSize="14sp"
+                app:cpb_textComplete="Ride Created"
+                app:cpb_textError="Error"
+                app:cpb_cornerRadius="2dp"
+                app:cpb_textIdle="Create"
+                app:cpb_selectorIdle="@drawable/button_blue3_idle_state_selector" />
+        </LinearLayout>
+
+        <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/toolbar"
+            style="@style/MyToolbarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimaryDark" />
+    </FrameLayout>
+</ScrollView>

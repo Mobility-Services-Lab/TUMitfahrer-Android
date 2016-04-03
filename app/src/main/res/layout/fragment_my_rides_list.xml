@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_refresh_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/list"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:divider="@color/gray_faded"
+            android:dividerHeight="1dp"
+            android:clipToPadding="false"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/empty_view_image"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_empty2" />
+
+                <TextView
+                    android:id="@+id/empty_view_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/empty_view_image"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="No rides available" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

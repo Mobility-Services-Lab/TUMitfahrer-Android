@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.tum.mitfahr">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="de.tum.mitfahrerapp.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="de.tum.mitfahrerapp.permission.C2D_MESSAGE" />
+
+
+    <application
+        android:name=".TUMitfahrApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+        <activity
+            android:name=".ui.LoginRegisterActivity"
+            android:label="@string/title_activity_login_register"
+            android:theme="@style/NoActionBarTheme" />
+        <activity
+            android:name=".ui.RideDetailsActivity"
+            android:label=""
+            android:noHistory="true"
+            android:parentActivityName=".ui.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.EditRideActivity"
+            android:label=""
+            android:noHistory="true"></activity>
+        <activity
+            android:name=".ui.SearchResultsActivity"
+            android:label="@string/title_activity_search_results"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".ui.AboutActivity"
+            android:theme="@style/NoActionBarTheme"
+            android:label="@string/title_activity_about"></activity>
+        <activity
+            android:name=".ui.LicensesActivity"
+            android:label="@string/title_activity_licenses"></activity>
+        <activity
+            android:name=".ui.TermsOfUseActivity"
+            android:label="@string/title_activity_terms_of_use"></activity>
+        <activity
+            android:name=".ui.GeneralTermsAndConditionsActivity"
+            android:label="@string/title_activity_general_terms_and_conditions"></activity>
+        <activity
+            android:name=".ui.UserDetailsActivity"
+            android:label=""></activity>
+        <activity
+            android:name=".ui.FeedbackActivity"
+            android:label="@string/title_feedback"></activity>
+        <activity
+            android:name=".ui.EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"></activity>
+
+        <receiver
+            android:name="de.tum.mitfahr.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="de.tum.mitfahrerapp" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="de.tum.mitfahr.gcm.GcmIntentService" />
+
+    </application>
+
+</manifest>

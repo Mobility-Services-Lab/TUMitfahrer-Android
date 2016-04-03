@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:scaleType="center"
+        android:background="@color/blue1"
+        android:id="@+id/timeline_type_image"
+        android:src="@drawable/placeholder"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/timeline_activity_text"
+            android:singleLine="true"
+            android:text="User searched for a ride from"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/timeline_location_text"
+            android:text="Location"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:id="@+id/timeline_time_text"
+            android:text="2 mins ago"
+            android:textColor="@color/gray"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
