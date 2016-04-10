@@ -1,0 +1,23 @@
+TUMitfahrer Android Application.
+Copyright 2015 Technische Universität München.
+
+Licenses for third party references:
+
+Jake Wharton Butterknife under the Apache License, Version 2.0.
+Derek Brameyer android-betterpickers under the Apache License, Version 2.0.
+Picasso under the Apache License, Version 2.0.
+Squareup retrofit under the Apache License, Version 2.0.
+Squareup Okhttp under the Apache License, Version 2.0.
+Squareup Otto under the Apache License, Version 2.0.
+Andreas Stuetz PagerSlidingTabStrip under the Apache License, Version 2.0.
+Danlew Joda Time under the Apache License, Version 2.0.
+Emilsjolander StickyListHeaders under the Apache License, Version 2.0.
+Danylyk Dmytro Circular-progress-button under the MIT License.
+Le Van Hoang android-segmented under the MIT License.
+Antoine Merle SmoothProgressBar under the Apache License, Version 2.0.
+Niek Haarman ListViewAnimations under the Apache License, Version 2.0.
+Pkmmte Xeleon CircularImageView under the MIT License.
+Flavioarfaria KenBurnsView under the Apache License, Version 2.0.
+Oleksandr Melnykov FloatingActionButton under the MIT License.
+Squareup android-times-square under the Apache License, Version 2.0.
+
