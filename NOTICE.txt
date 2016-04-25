@@ -1,5 +1,11 @@
 TUMitfahrer Android Application.
-Copyright 2015 Technische Universität München.
+Copyright 2015 Technische UniversitÃ¤t MÃ¼nchen.
+
+Authors:
+Duygu Sarikaya
+Sajjad Ali Siddiqui
+Monika Ullrich
+Kiran Jayaramu
 
 Licenses for third party references:
 
