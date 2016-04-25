@@ -13,7 +13,7 @@ There are services for different controllers which assign the required values to
 
 The following credentials have to be added (to the following positions):
 Google Analytics Tracking ID (in app_tracker.xml)
-Google Places API key (in GooglePlacesAPIHelper.java)
+Google Places API key (in GooglePlacesAPIHelper.java)
 
 The following changes have to be made before deploying the application to Google Play:
 Set version code and version name (in the app's build.gradle)
